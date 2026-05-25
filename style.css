@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #1a1a2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Courier New', monospace;
+  padding: 24px 16px;
+}
+
+h1 {
+  color: #e0d7ff;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/* ── Toolbar ─────────────────────────────────────── */
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Primary action buttons (Resize, Clear) */
+.btn {
+  background: transparent;
+  color: #c4b5fd;
+  border: 1.5px solid #7c3aed;
+  padding: 8px 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn:hover {
+  background: #7c3aed;
+  color: #fff;
+}
+
+/* Mode toggle buttons (Solid, Rainbow, Shading) */
+.mode-btn {
+  background: transparent;
+  color: #a1a1aa;
+  border: 1.5px solid #3f3f46;
+  padding: 6px 14px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+
+.mode-btn.active {
+  background: #18181b;
+  color: #e0d7ff;
+  border-color: #c4b5fd;
+}
+
+.grid-info {
+  color: #71717a;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* ── Grid container ──────────────────────────────── */
+
+#container {
+  width: 480px;
+  height: 480px;
+  display: flex;
+  flex-wrap: wrap;       /* This is what turns a row of divs into a grid */
+  border: 1.5px solid #3f3f46;
+  background: #09090b;
+}
+
+/* ── Individual grid cells ───────────────────────── */
+
+.grid-cell {
+  background: #09090b;
+  transition: background 0.05s;
+  cursor: crosshair;
+  box-sizing: border-box;  /* Keeps borders from throwing off the cell sizes */
+}
+
+.grid-cell.colored {
+  background: #7c3aed !important;
+}

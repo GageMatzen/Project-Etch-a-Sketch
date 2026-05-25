@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sketchpad</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <h1>Sketchpad</h1>
+ 
+  <div class="toolbar">
+    <button class="btn" onclick="changeGrid()">⊞ Resize Grid</button>
+    <button class="btn" onclick="clearGrid()">✕ Clear</button>
+    <button class="mode-btn active" id="btn-solid" onclick="setMode('solid')">Solid</button>
+    <button class="mode-btn" id="btn-rainbow" onclick="setMode('rainbow')">Rainbow</button>
+    <button class="mode-btn" id="btn-shade" onclick="setMode('shade')">Shading</button>
+    <span class="grid-info" id="grid-info">16 × 16</span>
+  </div>
+ 
+  <div id="container"></div>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
